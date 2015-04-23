@@ -1,0 +1,12 @@
+#!/usr/bin/env groovy
+
+List nouns = new File("nouns.txt").readLines()
+List adjectives = new File("adjectives.txt").readLines()
+
+Random r = new Random()
+
+String adj1 = adjectives[ r.nextInt(adjectives.size()) ]
+String adj2 = adjectives[ r.nextInt(adjectives.size()) ]
+String noun = nouns[ r.nextInt(nouns.size()) ]
+
+println "${adj1} ${adj2} ${noun}"
